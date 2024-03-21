@@ -7,7 +7,7 @@ const options = {
     accept: "application/json",
     Authorization: `Bearer ${API_KEY}`,
   },
-  next: { revalidate: 10 },
+  next: { revalidate: 10000 },
 };
 
 export default async function Home({ searchParams }) {
@@ -24,6 +24,7 @@ export default async function Home({ searchParams }) {
     throw new Error("Failed to fetch data");
   }
   const listMovie = data.results;
+  
   return (
     <div>
       <ListMovie list={listMovie} />
