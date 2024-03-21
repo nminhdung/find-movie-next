@@ -7,6 +7,7 @@ const options = {
     accept: "application/json",
     Authorization: `Bearer ${API_KEY}`,
   },
+  next: { revalidate: 10 },
 };
 
 export default async function Home({ searchParams }) {
@@ -17,6 +18,7 @@ export default async function Home({ searchParams }) {
     }?language=en-US&page=1`,
     options
   );
+
   const data = await res.json();
   if (!res.ok) {
     throw new Error("Failed to fetch data");
