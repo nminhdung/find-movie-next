@@ -10,13 +10,11 @@ const options = {
 };
 
 export default async function MoviePage({ params }) {
-  console.log("🚀 ~ MoviePage ~ params:", params);
   const res = await fetch(
     `https://api.themoviedb.org/3/movie/${params.id}`,
     options
   );
   const data = await res.json();
-  console.log("🚀 ~ MoviePage ~ data:", data);
   return (
     <div className="max-w-6xl mx-auto mt-16">
       <div className="p-4 flex flex-col md:flex-row gap-8 items-center">

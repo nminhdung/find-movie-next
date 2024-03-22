@@ -10,12 +10,12 @@ const Card = ({ data }) => {
       <Link href={`/movie/${data.id}`} className="relative">
         <Image
           src={`https://image.tmdb.org/t/p/original/${
-            data.backdrop_path || data.poster_path
+            data.backdrop_path 
           }`}
           width={500}
           height={300}
           alt="poster"
-          className="sm:rounded-lg group-hover:opacity-60 transition-opacity duration-300"
+          className="sm:rounded-lg group-hover:opacity-60 transition-opacity duration-300 "
         ></Image>
         <div className="absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] hidden group-hover:inline-block space-x-2">
           <span
@@ -29,7 +29,7 @@ const Card = ({ data }) => {
       </Link>
 
       <div className="flex flex-col h-full w-full p-2">
-        <h2 className="font-bold flex-1">{data.title || data.name}</h2>
+        <h2 className="font-bold mb-auto  ">{data.title || data.name}</h2>
         <p className="line-clamp-2 text-md  ">{data.overview}</p>
         <div className="flex  items-center justify-between">
           {data.release_date}
