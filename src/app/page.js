@@ -1,11 +1,11 @@
 import ListMovie from "@/components/ListMovie";
 import Image from "next/image";
-const API_KEY = process.env.API_KEY;
+const API_KEY_TOKEN = process.env.API_KEY_TOKEN;
 const options = {
   method: "GET",
   headers: {
     accept: "application/json",
-    Authorization: `Bearer ${API_KEY}`,
+    Authorization: `Bearer ${API_KEY_TOKEN}`,
   },
   next: { revalidate: 10000 },
 };

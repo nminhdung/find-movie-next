@@ -4,7 +4,7 @@ import React from "react";
 import { FiThumbsUp } from "react-icons/fi";
 
 const Card = ({ data }) => {
-  console.log(data);
+  // console.log(data)
   return (
     <div className="group flex flex-col gap-2 rounded-lg shadow-lg dark:shadow-lime-50 dark:shadow-md">
       <Link href={`/movie/${data.id}`} className="relative">
